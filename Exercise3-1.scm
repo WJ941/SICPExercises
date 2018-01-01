@@ -1,0 +1,5 @@
+(define (make-accumulate inital)
+  (lambda (n) 
+    (begin (set! inital (+ n inital)) inital)  
+  )
+)
