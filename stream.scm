@@ -5,9 +5,9 @@
   )
 )
 
-(define (cons-stream a b)
-  (cons a (delay b))
-)
+; (define (cons-stream a b)
+;   (cons a (delay b))
+; )
 (define (stream-for-each proc s)
   (if (stream-null? s)
     'done
@@ -42,7 +42,6 @@
       )
 )
 
-(define (force delayed-objected) (delayed-objected))
 
 (define (memo-proc proc)
   (let ((already-run? false) (result false))
@@ -57,8 +56,8 @@
     )
   )
 )
-(define (delay proc)
-  (memo-proc (lambda () proc)))
+; (define (delay proc)
+;   (memo-proc (lambda () proc)))
 ; (define (delay proc)
 ;    (lambda () proc))
 
